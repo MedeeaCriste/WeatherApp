@@ -1,0 +1,221 @@
+body{
+    
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #301E67;
+    background-size: cover;
+    
+}
+
+main{
+    
+    position: relative;
+    width: 400px;
+    height: 90px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+
+}
+.search-bar{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+  
+
+}
+
+.search-bar input{
+    color: #301E67;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+    border: none;
+    outline: none;
+    
+}
+
+.search-bar input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.search-bar button{
+    flex-shrink: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    fill: #301E67;
+    background-color: white;
+    font-size: 22px;
+    transition: 0.4s ease;
+    border-radius: 50%;
+    background-color: #E3DFFD;
+    border: #E3DFFD;
+}
+
+.search-bar button:hover{
+    fill: white;
+    background-color: #301E67;
+}
+
+.search-bar #lovationsvg{
+    position: absolute;
+}
+
+.weather-box{
+    text-align: center;
+    
+}
+
+.weather-box img{
+    width: 70%;
+    margin-top: -20px;
+}
+
+.weather-box .temperature{
+    position: relative;
+    color: #301E67;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: -30px;
+    margin-left: -16px;
+}
+
+.weather-box .temperature span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box .description{
+    color: #301E67;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -30px;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+    gap: 10px;
+
+}
+
+.weather-details .humidity{
+    padding-right:20px ;
+    justify-content: flex-start;
+}
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+
+}
+.weather-details svg{
+    width: 30px;
+    fill: #301E67;
+    
+}
+
+.weather-details span{
+    color: #301E67;
+    font-size: 24px;
+    font-weight: 500;
+}
+.weather-details p{
+    font-size: 16px;
+    color: #301E67;
+    font-weight: 500;
+
+}
+
+.error{
+    width: 100%;
+    text-align: center;
+    scale: 0;
+    opacity: 0;
+    display: none;
+
+}
+.error img{
+    width: 80%;
+    
+}
+.error p{
+    margin-top: -60px;
+    font-size: 18px;
+    color: #301E67;
+}
+
+.weather-box, .weather-details{
+    scale: 0;
+    opacity: 0;
+
+}
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 700px) {
+   body{
+    background-color: white;
+   }
+    main{
+        background-color: #E3DFFD;
+        width: 250px;
+        height: 84px;
+        padding: 7px 18px;
+    }
+    .search-bar{
+        gap: 5px;
+        padding: 10px;
+    }
+    .search-bar input{
+        background-color: #E3DFFD;
+        padding: 20px;
+        font-size: 15px;
+       
+    }
+    .search-bar input::placeholder{
+        font-size: 15px;
+    }
+    .weather-details svg {
+        width: 20px;}
+    
+    .weather-details span {
+            
+        font-size: 18px;}
+}
